@@ -114,3 +114,6 @@ Do not hesitate to contribute by [filling an issue](https://github.com/zenika-op
 This project is under the [Apache License 2.0](https://github.com/zenika-open-source/terraform-azure-cli/blob/master/LICENSE)
 
 [![with love by zenika](https://img.shields.io/badge/With%20%E2%9D%A4%EF%B8%8F%20by-Zenika-b51432.svg)](https://oss.zenika.com)
+
+
+docker run --name testing --mount type=bind,source=$PWD/../mount,target=/workspace --rm -it fa98ded10f2 bash -c "source /workspace/deploy.sh"
