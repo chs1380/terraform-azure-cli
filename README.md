@@ -117,3 +117,4 @@ This project is under the [Apache License 2.0](https://github.com/zenika-open-so
 
 
 docker run --name testing --mount type=bind,source=$PWD/../mount,target=/workspace --rm -it fa98ded10f2 bash -c "source /workspace/deploy.sh"
+docker run --name testing --mount type=bind,source=$PWD/../mount,target=/workspace --rm -it fa98ded10f2 bash -c "source /workspace/undeploy.sh"
