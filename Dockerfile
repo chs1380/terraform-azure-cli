@@ -52,10 +52,4 @@ COPY --from=azure-cli /usr/local/bin/az* /usr/local/bin/
 COPY --from=azure-cli /usr/local/lib/python${PYTHON_MAJOR_VERSION}/dist-packages /usr/local/lib/python${PYTHON_MAJOR_VERSION}/dist-packages
 COPY --from=azure-cli /usr/lib/python3/dist-packages /usr/lib/python3/dist-packages
 
-RUN groupadd --gid 1001 nonroot \
-  # user needs a home folder to store azure credentials
-  && useradd --gid nonroot --create-home --uid 1001 nonroot \
-  && chown nonroot:nonroot /workspace
-USER nonroot
-
 CMD ["bash"]
