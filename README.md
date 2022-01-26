@@ -116,5 +116,5 @@ This project is under the [Apache License 2.0](https://github.com/zenika-open-so
 [![with love by zenika](https://img.shields.io/badge/With%20%E2%9D%A4%EF%B8%8F%20by-Zenika-b51432.svg)](https://oss.zenika.com)
 
 
-docker run --name testing --mount type=bind,source=$PWD/../mount,target=/workspace --rm -it fa98ded10f2 bash -c "source /workspace/deploy.sh"
-docker run --name testing --mount type=bind,source=$PWD/../mount,target=/workspace --rm -it fa98ded10f2 bash -c "source /workspace/undeploy.sh"
+docker run --name testing --mount type=bind,source=$PWD/../mount,target=/workspace --rm -it <imageid> bash -c "source /workspace/deploy.sh"
+docker run --name testing --mount type=bind,source=$PWD/../mount,target=/workspace --rm -it <imageid> bash -c "source /workspace/undeploy.sh"
