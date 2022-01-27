@@ -35,7 +35,7 @@ RUN pip3 install --no-cache-dir azure-cli==${AZURE_CLI_VERSION}
 
 # Build final image
 FROM debian:${DEBIAN_VERSION}
-LABEL maintainer="bgauduch@github"
+LABEL maintainer="wongcyrus@github"
 ARG PYTHON_MAJOR_VERSION
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -43,6 +43,7 @@ RUN apt-get update \
     git=1:2.30.2-1 \
     python3=${PYTHON_MAJOR_VERSION}.2-3 \
     python3-distutils=${PYTHON_MAJOR_VERSION}.2-1 \
+    curl=7.74.0-1.3+deb11u1 \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && update-alternatives --install /usr/bin/python python /usr/bin/python${PYTHON_MAJOR_VERSION} 1
