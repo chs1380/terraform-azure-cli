@@ -46,6 +46,7 @@ RUN apt-get update \
     python3-distutils=${PYTHON_MAJOR_VERSION}.2-1 \
     curl=7.74.0-1.3+deb11u1 \
     jq=1.6-2.1 \
+    zip=3.0-12 \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && update-alternatives --install /usr/bin/python python /usr/bin/python${PYTHON_MAJOR_VERSION} 1
