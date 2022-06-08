@@ -2,8 +2,8 @@
 
 set -eo pipefail
 
-AZURE_CLI_VERSION=2.32.0
-TERRAFORM_VERSION=1.1.4
+AZURE_CLI_VERSION=2.37.0
+TERRAFORM_VERSION=1.2.2
 
 # FIXME: use getopts function to parse aguments
 # FIXME: if provided, both TF and AZ CLI semvers should be regex-validated
